@@ -9,12 +9,10 @@ import demo.Database;
 
 /***********************************************************
  * Filename: Main.java
- * 
  * @author fba 6 de Mai de 2013
  ***********************************************************/
 public abstract class Main
 {
-
 	/***********************************************************
 	 * @param args
 	 * @throws IOException
@@ -82,5 +80,4 @@ public abstract class Main
 		
 		Database.close();
 	}
-
 }

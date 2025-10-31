@@ -3,18 +3,23 @@ package v7;
 public class Price
 {
 	public enum Code {REGULAR, CHILDRENS, NEW_RELEASE}
-	
-	public Code	_priceCode;
 
-	public Price()
+	public Price.Code _code;
+
+	public Price(Price.Code code)
 	{
+		_code = code;
 	}
 
-	public double getRentalAmount(Movie movie, int duration)
+	public Price.Code getCode() {
+		return _code;
+	}
+
+	public double getRentalAmount(int duration)
 	{
 		double result = 0;
-	
-		switch (_priceCode)
+
+		switch (_code)
 		{
 			case REGULAR:
 				result += 2;
@@ -31,5 +36,10 @@ public class Price
 				break;
 		}
 		return result;
+	}
+
+	public int getFrequentRentalPoints(int duration)
+	{
+		return (_code == Price.Code.NEW_RELEASE) && duration > 1 ? 2 : 1;
 	}
 }

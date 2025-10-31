@@ -92,5 +92,4 @@ public class Customer
 			totalAmount += each.getMovie().getPrice().getRentalAmount(each.getDaysRented());
 		return totalAmount;
 	}
-
 }
