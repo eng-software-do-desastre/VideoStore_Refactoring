@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <Class name="vNew.RegularPrice" x="6" y="304">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="true"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="true"
+            accessors-accepted="true" constructors-accepted="false"/>
+        <Extension destinationClassName="vNew.Price"/>
+        <Communication destinationClassName="vNew.Price"/>
+    </Class>
+    <Class name="vNew.NewReleasePrice" x="395" y="305">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="true"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="true"
+            accessors-accepted="true" constructors-accepted="false"/>
+        <Extension destinationClassName="vNew.Price"/>
+        <Communication destinationClassName="vNew.Price"/>
+    </Class>
+    <Class name="vNew.Rental" x="444" y="25">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="true"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="true"
+            accessors-accepted="true" constructors-accepted="true"/>
+        <Association destinationClassName="vNew.Movie"
+            endpointName="_movie" kind="Simple"/>
+    </Class>
+    <Class name="vNew.Price" x="184" y="160">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="true"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="true"
+            accessors-accepted="true" constructors-accepted="false"/>
+    </Class>
+    <Class name="vNew.Customer" x="676" y="2">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="true"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="true"
+            accessors-accepted="true" constructors-accepted="false"/>
+        <Association destinationClassName="vNew.Rental"
+            endpointName="_rentals" kind="Simple"/>
+        <Communication destinationClassName="vNew.Rental"/>
+        <Communication destinationClassName="vNew.Price"/>
+        <Communication destinationClassName="vNew.Movie"/>
+    </Class>
+    <Class name="vNew.BestPrice" x="589" y="303">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="true"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"
+            accessors-accepted="true" constructors-accepted="false"/>
+        <Extension destinationClassName="vNew.Price"/>
+        <Communication destinationClassName="vNew.Price"/>
+    </Class>
+    <Class name="vNew.Movie" x="228" y="32">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="true"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="true"
+            accessors-accepted="true" constructors-accepted="false"/>
+        <Association destinationClassName="vNew.Price"
+            endpointName="_price" kind="Simple"/>
+    </Class>
+    <Class name="vNew.ChildrensPrice" x="200" y="305">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="true"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="true"
+            accessors-accepted="true" constructors-accepted="false"/>
+        <Extension destinationClassName="vNew.Price"/>
+        <Communication destinationClassName="vNew.Price"/>
+    </Class>
+</ClassDiagram>
